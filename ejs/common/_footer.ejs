@@ -1,0 +1,35 @@
+<% if(pageData.template != 'contact'){%>
+	<section class="sec-contact">
+		<a href="#" class="inner contact-top">
+			<img src="<%= RELATIVE_PATH %>img/common/bg-contact.jpg" alt="">
+			<div class="contact-top__wp">
+				<h2 class="contact-top__ttl c-ttl__01">
+					<span>Contact</span>
+					<small>お問い合わせ</small>
+				</h2>
+				<p class="contact-top__desc c-txt__01">
+					詳しいご説明を希望される場合は、Web からお問い合わせいただけます。
+				</p>
+			</div>
+		</a>
+	</section>
+<%}%>
+<footer id="main-footer" class="main-footer <% if(pageData.template == 'contact'){%>footer-contact<%}%>">
+	<div class="inner">
+		<a href="#" class="main-footer__logo">
+			<img src="<%= RELATIVE_PATH %>img/common/logo.png" alt="">
+			<span>印刷事業部</span>
+		</a>
+		<ul class="main-footer__nav">
+			<li><a href="#">メッセージ・理念</a></li>
+			<li><a href="#">企業情報</a></li>
+			<li><a href="#">お問い合わせ</a></li>
+		</ul>
+		<div class="main-footer__bottom">
+			<a href="#" class="main-footer__bottom-privacy">プライバシーポリシー</a>
+			<p class="main-footer__bottom-copy">&copy; 2023 OFFICE CORPORATION. ALL RIGHTS RESERVED.</p>
+		</div>
+	</div>
+</footer>
+
+
