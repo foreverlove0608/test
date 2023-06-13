@@ -212,6 +212,7 @@ Component
 				@include font-size(16);
 				line-height: 1.5;
 				padding-left: 30px;
+				margin-bottom: 0;
 			}
 			@include p-before(10px, 10px){
 				background: #03A34D;
@@ -224,7 +225,7 @@ Component
 					height: 7px;
 					left: 10px;
 					transform: none;
-					top: 10px;
+					top: 8px;
 				}
 			}
 		}

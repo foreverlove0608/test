@@ -191,6 +191,30 @@
 			"keyword": "",
 			"h1": "",
 			"depth": 1
+		},
+		{
+			"id": "index",
+			"parentId1": "message",
+			"parentId2": "",
+			"parentId3": "",
+			"parentId4": "",
+			"bread1": "メッセージ・理念",
+			"bread2": "",
+			"bread3": "",
+			"bread4": "",
+			"bread5": "",
+			"bread1_url": "/",
+			"bread2_url": "",
+			"bread3_url": "",
+			"bread4_url": "",
+			"bread5_url": "",
+			"template": "message",
+			"title": "Message",
+			"description": "TOP",
+			"description_meta": "",
+			"keyword": "",
+			"h1": "",
+			"depth": 1
 		}
 	]
 }
