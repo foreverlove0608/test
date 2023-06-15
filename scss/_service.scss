@@ -40,6 +40,23 @@
 
 	&__slider {
 		margin-bottom: 160px;
+		margin-left: -15px;
+		margin-right: -15px;
+		.slick-list{
+			@include mq{
+				padding-left: 0 !important;
+			}
+		}
+		@include mq{
+			margin-left: -8px;
+			margin-right: -8px;
+		}
+		&-item{
+			padding: 0 15px;
+			@include mq{
+				padding: 0 8px;
+			}
+		}
 		@include mq{
 			margin-bottom: 90px;
 		}
@@ -145,6 +162,7 @@
 
 
 .service-print{
+	padding-bottom: 6.250vw;
 	&__intro{
 		margin-bottom: 9.375vw;
 		@include mq{

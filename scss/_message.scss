@@ -19,6 +19,8 @@
             width: 40.31%;
             @include mq{
                 width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
             }
         }
         &-ct{

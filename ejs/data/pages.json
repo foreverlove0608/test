@@ -215,6 +215,30 @@
 			"keyword": "",
 			"h1": "",
 			"depth": 1
+		},
+		{
+			"id": "index",
+			"parentId1": "about",
+			"parentId2": "",
+			"parentId3": "",
+			"parentId4": "",
+			"bread1": "企業情報",
+			"bread2": "",
+			"bread3": "",
+			"bread4": "",
+			"bread5": "",
+			"bread1_url": "/",
+			"bread2_url": "",
+			"bread3_url": "",
+			"bread4_url": "",
+			"bread5_url": "",
+			"template": "about",
+			"title": "About",
+			"description": "TOP",
+			"description_meta": "",
+			"keyword": "",
+			"h1": "",
+			"depth": 1
 		}
 	]
 }
