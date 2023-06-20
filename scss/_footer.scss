@@ -185,7 +185,7 @@ Footer
 			}
 		}
 		&-copy{
-			@include font-size(18);
+			@include font-size(16);
 			font-weight: 600;
 			@include mq(tb){
 				@include font-size(14);

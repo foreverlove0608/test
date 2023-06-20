@@ -3,7 +3,6 @@
 		<a href="<%= RELATIVE_PATH %>" class="main-header__logo">
 			<img src="<%= RELATIVE_PATH %>img/common/logo-wt.png" alt="" width="" class="logo-wt">
 			<img src="<%= RELATIVE_PATH %>img/common/logo.png" alt="" width="" class="logo">
-			<span>印刷事業部</span>
 		</a>
 		<span class="main-header__mobile-icon">
 			<span class="main-header__mobile-icon-border"></span>
@@ -13,11 +12,8 @@
 		<nav class="main-header__navGlobal">
 			<p class="main-header__label sp">MENU</p>
 			<ul class="main-header__menu" role="list">
-				<li class="main-header__menu-item <% if(pageData.template == 'message'){%>active<%}%>"><a href="<%= RELATIVE_PATH %>message/" class="main-header__link">メッセージ・理念</a></li>
-				<li class="main-header__menu-item <% if(pageData.template == 'about'){%>active<%}%>"><a href="<%= RELATIVE_PATH %>about/" class="main-header__link">企業情報</a></li>
-				<li class="main-header__menu-item <% if(pageData.template == 'service'){%>active<%}%>"><a href="<%= RELATIVE_PATH %>" class="main-header__link">事業内容</a></li>
-				<li class="main-header__menu-item <% if(pageData.template == 'service_01' || pageData.template == 'service_02' || pageData.template == 'service_03' || pageData.template == 'service_04'){%>active<%}%>"><a href="<%= RELATIVE_PATH %>" class="main-header__link">強み</a></li>
-				<li class="main-header__menu-item main-header__menu-item--contact"><a href="" class="main-header__link">お問い合わせ</a></li>
+				<li class="main-header__menu-item <% if(pageData.template == 'service'){%>active<%}%>"><a href="<%= RELATIVE_PATH %>service" class="main-header__link">事業内容</a></li>
+				<li class="main-header__menu-item main-header__menu-item--contact"><a href="/contact/" class="main-header__link">お問い合わせ</a></li>
 			</ul>
 		</nav>
 	</div>

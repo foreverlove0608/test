@@ -4,6 +4,7 @@
 $('.main-header__mobile-icon').on('click', function () {
 	$(this).toggleClass("mobile-close");
 	$(".main-header__navGlobal").fadeToggle(300).toggleClass("is-show");
+	$("html").toggleClass("is-locked");
 });
 
 
@@ -15,6 +16,12 @@ $(window).scroll(function () {
 	}
 });
 
+// We listen to the resize event
+window.addEventListener('resize', () => {
+	// We execute the same script as before
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
 
 
 /*----------------------------------------
@@ -78,9 +85,20 @@ $(function () {
 		}
 
 	});
+
+	
 });
 
-
+$(window).scroll(function() {
+	var scrollDistance = $(window).scrollTop();
+	// Assign active class to nav links while scolling
+	$('.section-page').each(function (i) {
+		if ($(this).offset().top - 150 <= scrollDistance) {
+			$('.box-sidebar__list li.active').removeClass('active');
+			$('.box-sidebar__list li').eq(i).addClass('active');
+		}
+	});
+}).scroll();
 
 /*----------------------------------------
 	Pages
@@ -90,6 +108,7 @@ $(function () {
 	
 	$('.service-page__slider').slick({
 		centerMode: true,
+		pauseOnHover: false,
 		centerPadding: '13%',
 		slidesToShow: 2,
 		autoplay: true,
@@ -150,11 +169,12 @@ $(function () {
 			slidesToScroll: 1,
 			dots: true,
 			autoplay: true,
-			autoplaySpeed: 5000,
+			autoplaySpeed: 4000,
 			focusOnSelect: true,
-			dots: true,
 			appendDots: $(this).next(),
 			dotsClass: 'slider-dots',
+			fade: true,
+			cssEase: 'linear',
 		});
 	
 		// On before slide change

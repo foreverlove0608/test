@@ -1,129 +1,129 @@
 @use 'vars' as *;
 
 .company-page{
-    padding-bottom: 90px;
-    &__content{
-        dl{
-            @include flex(0, 0, wrap);
-            padding: 40px 5.729vw;
-            border-top: 1px solid #E2E8F0;
-            @include mq{
-                padding: 10px 15px;
-            }
-            dt{
-                width: 290px;
-                font-weight: 700;
-                @include mq{
-                    @include font-size(20);
-                    width: 100%;
-                    margin-bottom: 0;
-                }
-            }
-            dd{
-                width: calc(100% - 290px);
-                @include mq{
-                    width: 100%;
-                }
-            }
-        }
-    }
+	padding-bottom: 90px;
+	&__content{
+		dl{
+			@include flex(0, 0, wrap);
+			padding: 40px 5.729vw;
+			border-top: 1px solid #E2E8F0;
+			@include mq{
+				padding: 10px 15px;
+			}
+			dt{
+				width: 290px;
+				font-weight: 700;
+				@include mq{
+					@include font-size(20);
+					width: 100%;
+					margin-bottom: 0;
+				}
+			}
+			dd{
+				width: calc(100% - 290px);
+				@include mq{
+					width: 100%;
+				}
+			}
+		}
+	}
 }
 
 .history-page{
-    padding-bottom: 6.25vw;
-    &__wrapper{
-        @include flex(0, 0, wrap);
-        padding-top: 90px;
-        border-top: 1px solid #E2E8F0;
-        @include mq{
-            padding-top: 40px;
-        }
-    }
-    &__img{
-        width: 31.78%;
-        @include mq{
-            display: none;
-        }
-        &-item{
-            margin-bottom: 7.604vw;
-            &:last-of-type{
-                margin-bottom: 0;
-            }
-        }
-    }
+	padding-bottom: 6.25vw;
+	&__wrapper{
+		@include flex(0, 0, wrap);
+		padding-top: 90px;
+		border-top: 1px solid #E2E8F0;
+		@include mq{
+			padding-top: 40px;
+		}
+	}
+	&__img{
+		width: 31.78%;
+		@include mq{
+			display: none;
+		}
+		&-item{
+			margin-bottom: 7.604vw;
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+		}
+	}
 
-    &__content{
-        width: calc(100% - 31.78%);
-        padding-right: 7.292vw;
-        position: relative;
-        @include mq{
-            width: 100%;
-           padding-right: 0;
-        }
-        @include p-before(1px, 100%){
-            background: #E2E8F0;
-            top: 0;
-            left: 24px;
-            @include mq{
-                left: 13px;
-            }
-        }
-        dl{
-            @include flex(0, start, wrap);
-            padding-bottom: 60px;
-            @include mq{
-                padding-bottom: 40px;
-            }
-            &:last-child{
-                padding-bottom: 0;
-                @include mq{
-                    padding-bottom: 15px;
-                }
-            }
-            dt{
-                width: 140px;
-                @include font-size(40);
-                font-weight: 600;
-                color: #03A34D;
-                position: relative;
-                padding-left: 50px;
-                margin-bottom: 10px;
-                @include mq(xl){
-                    @include font-size(32);
-                }
-                @include mq{
-                    line-height: 1.5;
-                    padding-left: 30px;
-                    margin-bottom: 0;
-                    width: 100%;
-                }
-                @include p-before(10px, 10px){
-                    background: #03A34D;
-                    border-radius: 50%;
-                    left: 20px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    @include mq{
-                        width: 7px;
-                        height: 7px;
-                        left: 10px;
-                    }
-                }
-            }
-            dd{
-                width: calc(100% - 140px);
-                padding-left: 9.375vw;
-                @include mq{
-                    width: 100%;
-                    padding-left: 34px;
-                }
-                .c-txt__lead{
-                    margin-bottom: 10px;
-                    @include mq{
-                        margin-bottom: 5px;
-                    }
-                }
-            }
-        }
-    }
+	&__content{
+		width: calc(100% - 31.78%);
+		padding-right: 7.292vw;
+		position: relative;
+		@include mq{
+			width: 100%;
+		   padding-right: 0;
+		}
+		@include p-before(1px, 100%){
+			background: #E2E8F0;
+			top: 0;
+			left: 24px;
+			@include mq{
+				left: 13px;
+			}
+		}
+		dl{
+			@include flex(0, start, wrap);
+			padding-bottom: 60px;
+			@include mq{
+				padding-bottom: 40px;
+			}
+			&:last-child{
+				padding-bottom: 0;
+				@include mq{
+					padding-bottom: 15px;
+				}
+			}
+			dt{
+				width: 140px;
+				@include font-size(40);
+				font-weight: 600;
+				color: #03A34D;
+				position: relative;
+				padding-left: 50px;
+				margin-bottom: 10px;
+				@include mq(xl){
+					@include font-size(32);
+				}
+				@include mq{
+					line-height: 1.5;
+					padding-left: 30px;
+					margin-bottom: 0;
+					width: 100%;
+				}
+				@include p-before(10px, 10px){
+					background: #03A34D;
+					border-radius: 50%;
+					left: 20px;
+					top: 50%;
+					transform: translateY(-50%);
+					@include mq{
+						width: 7px;
+						height: 7px;
+						left: 10px;
+					}
+				}
+			}
+			dd{
+				width: calc(100% - 140px);
+				padding-left: 9.375vw;
+				@include mq{
+					width: 100%;
+					padding-left: 34px;
+				}
+				.c-txt__lead{
+					margin-bottom: 10px;
+					@include mq{
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
 }

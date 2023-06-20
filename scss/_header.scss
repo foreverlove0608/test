@@ -37,22 +37,6 @@ Header
 		.logo{
 			display: none;
 		}
-		img{
-			width: 230px;
-			@include mq{
-				width: 184px;
-			}
-		}
-		span{
-			font-size: 14px;
-			color: #fff;
-			position: relative;
-			bottom: 6px;
-			left: 4px;
-			@include mq{
-				display: none;
-			}
-		}
 		@include mq() {
 			width: 160px;
 		}
@@ -74,6 +58,13 @@ Header
 			@include mq{
 				background: #fff;
 				height: 100vh;
+			}
+			@include p-before(37%, 100%){
+				background: rgba($color: #000000, $alpha: .5);
+
+				top: 0;
+				left: 0;
+				transform: translateX(-100%);
 			}
 		}
 	}
@@ -144,7 +135,7 @@ Header
 		display: inline-block;
 		font-weight: 600;
 		color: #fff;
-		@include font-size(14);
+		@include font-size(16);
 		position: relative;
 		@include p-after(0, 1px){
 			background: #fff;
@@ -155,7 +146,7 @@ Header
 			visibility: hidden;
 		}
 		@include mq{
-			color: #000;
+			color: #0F1A2A;
 		}
 		&:hover{
 			&:after{
@@ -215,7 +206,7 @@ Header
 
 //active	
 	&.is-active, &.header-child{
-		background: #fff;
+		background: rgba(#000, .5);
 		@include mq(md-min){
 			background: #fff;
 			box-shadow: 0 0 10px rgba(#000, .1);
@@ -245,6 +236,7 @@ Header
 		}
 	}
 	&.header-child{
+		background: #fff;
 		.main-header__logo{
 			.logo-wt{
 				display: none;
@@ -433,3 +425,12 @@ Header
 }
 
 
+
+.is-locked {
+	overflow: hidden;
+	-ms-touch-action: none;
+	touch-action: none;
+	body {
+		-webkit-overflow-scrolling: auto;
+	}
+}

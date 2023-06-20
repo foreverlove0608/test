@@ -65,21 +65,3 @@ Utility
 		}
 	}
 }
-
-//JS scroll event
-.js-u__scrollin {
-	opacity: 0;
-	-webkit-transform: translate(0, 70px);
-	-ms-transform: translate(0, 70px);
-	transform: translate(0, 70px);
-}
-
-.js-u__scrollin.is-visible {
-	opacity: 1;
-	-webkit-transform: translate(0, 0);
-	-ms-transform: translate(0, 0);
-	transform: translate(0, 0);
-	-webkit-transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-	-o-transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-	transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}

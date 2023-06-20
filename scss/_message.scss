@@ -1,115 +1,115 @@
 @use 'vars' as *;
 
 .message-page{
-    padding-bottom: 13.542vw;
-    @include mq{
-        padding-bottom: 90px;
-    }
-    &__flex{
-        @include flex(0, center, wrap);
-        &-ttl{
-            width: calc(100% - 40.31%);
-            padding-right: 50px;
-            @include mq{
-                width: 100%;
-                padding-right: 0;
-            }
-        }
-        &-img{
-            width: 40.31%;
-            @include mq{
-                width: 100%;
-                max-width: 500px;
-                margin: 0 auto;
-            }
-        }
-        &-ct{
-            padding-top: 50px;
-            @include mq{
-                padding-top: 44px;
-            }
-        }
-        &-desc{
-            p{
-                margin-bottom: 15px;
-                &:last-of-type{
-                    margin-bottom: 0;
-                }
-            }
-        }
-        &-sign{
-            @include font-size(20);
-            font-weight: 600;
-            @include flex(end, center);
-            margin-top: 20px;
-            @include mq{
-                @include font-size(16);
-            }
-            small{
-                color: #64748B;
-                @include font-size(14);
-                font-weight: 400;
-                margin-right: 12px;
-            }
-        }
-    }
+	padding-bottom: 13.542vw;
+	@include mq{
+		padding-bottom: 90px;
+	}
+	&__flex{
+		@include flex(0, center, wrap);
+		&-ttl{
+			width: calc(100% - 40.31%);
+			padding-right: 50px;
+			@include mq{
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+		&-img{
+			width: 40.31%;
+			@include mq{
+				width: 100%;
+				max-width: 500px;
+				margin: 0 auto;
+			}
+		}
+		&-ct{
+			padding-top: 50px;
+			@include mq{
+				padding-top: 44px;
+			}
+		}
+		&-desc{
+			p{
+				margin-bottom: 15px;
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+			}
+		}
+		&-sign{
+			@include font-size(20);
+			font-weight: 600;
+			@include flex(end, center);
+			margin-top: 20px;
+			@include mq{
+				@include font-size(16);
+			}
+			small{
+				color: #64748B;
+				@include font-size(14);
+				font-weight: 400;
+				margin-right: 12px;
+			}
+		}
+	}
 }
 
 
 .philosophy-page{
-    padding-bottom: 6.250vw;
-    @include mq{
-        padding-bottom: 30px;
-    }
-    &__box{
-        padding: 6.250vw 5.729vw;
-        border-bottom: 1px solid #E2E8F0;
-        @include flex(0, 0, wrap);
-        @include mq{
-            padding: 0;
-            margin-bottom: 24px;
-            border-bottom: none;
-        }
-        &:nth-child(2){
-            border-top: 1px solid #E2E8F0;
-            @include mq{
-                padding-top: 30px;
-            }
-        }
-        &-dt{
-            width: 410px;
-            @include font-size(32);
-            font-weight: 600;
-            @include mq{
-                @include font-size(24);
-                margin-bottom: 16px;
-            }
-            @include mq{
-                width: 100%;
-                @include font-size(16);
-            }
-            span{
-                display: inline-block;
-                background: linear-gradient(180deg, #03A34D 0%, #00833C 100%);
-                padding: 10px 15px;
-                @include font-size(18);
-                font-weight: 600;
-                color: #fff;
-                margin-bottom: 20px;
-                @include mq{
-                    @include font-size(14);
-                    padding: 6px 8px;
-                    margin-bottom: 10px;
-                }
-            }
-        }
-        &-dd{
-            width: calc(100% - 410px);
-            padding-left: 7.292vw;
-            @include mq{
-                width: 100%;
-                padding-left: 0;
-            }
-        }
-    }
+	padding-bottom: 6.250vw;
+	@include mq{
+		padding-bottom: 30px;
+	}
+	&__box{
+		padding: 6.250vw 5.729vw;
+		border-bottom: 1px solid #E2E8F0;
+		@include flex(0, 0, wrap);
+		@include mq{
+			padding: 0;
+			margin-bottom: 24px;
+			border-bottom: none;
+		}
+		&:nth-child(2){
+			border-top: 1px solid #E2E8F0;
+			@include mq{
+				padding-top: 30px;
+			}
+		}
+		&-dt{
+			width: 410px;
+			@include font-size(32);
+			font-weight: 600;
+			@include mq{
+				@include font-size(24);
+				margin-bottom: 16px;
+			}
+			@include mq{
+				width: 100%;
+				@include font-size(16);
+			}
+			span{
+				display: inline-block;
+				background: linear-gradient(180deg, #03A34D 0%, #00833C 100%);
+				padding: 10px 15px;
+				@include font-size(18);
+				font-weight: 600;
+				color: #fff;
+				margin-bottom: 20px;
+				@include mq{
+					@include font-size(14);
+					padding: 6px 8px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		&-dd{
+			width: calc(100% - 410px);
+			padding-left: 7.292vw;
+			@include mq{
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+	}
 }

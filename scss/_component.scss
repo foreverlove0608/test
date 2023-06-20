@@ -91,7 +91,7 @@ Component
 	&__01{//14/29
 		@include fts(18, 25.2);
 		@include mq() {
-			@include fts(14, 19.6);
+			@include fts(16, 22.4);
 		}
 	}
 	&__lead{
@@ -108,11 +108,6 @@ Component
 
 
 // Common Title style
-%__c-ttl__01{
-	
-}
-
-
 .c-ttl{
 	&__01{
 		margin-bottom: 65px;

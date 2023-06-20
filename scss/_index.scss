@@ -1,9 +1,9 @@
 @use "vars" as *;
 
 .mv-top {
-	height: 100vh;
+	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+	height: calc(var(--vh, 1vh) * 100);
 	position: relative;
-
 	.slider-dots-box {
 		position: absolute;
 		left: 50px;
@@ -61,7 +61,7 @@
 			}
 
 			@include mq {
-				@include font-size(38);
+				@include font-size(32);
 			}
 		}
 
@@ -74,7 +74,7 @@
 			}
 
 			@include mq {
-				@include font-size(24);
+				@include font-size(20);
 			}
 		}
 	}
@@ -88,7 +88,8 @@
 			overflow: hidden;
 
 			img {
-				height: 100vh;
+				height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+				height: calc(var(--vh, 1vh) * 100);
 				width: 100%;
 				@include object-fit(cover);
 				transition: 10s linear;
@@ -221,7 +222,7 @@
 		font-weight: 600;
 
 		@include mq {
-			@include font-size(40);
+			@include font-size(32);
 			margin-bottom: 40px;
 		}
 	}
@@ -231,20 +232,28 @@
 		padding-bottom: 14.5vw;
 
 		@include mq {
-			padding-bottom: 20vw;
+			display: block;
+			padding-bottom: 63px;
 		}
 
 		li {
 			position: relative;
-
+			@include mq{
+				margin-bottom: 35px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
 			@include p-after(1.2vw, 11.5vw) {
 				background: url(../img/index/arrow-green.png) no-repeat bottom center/100%;
 				bottom: 5px;
 				left: 50%;
 				transform: translate(-50%, 100%);
-
 				@include mq(tb) {
 					bottom: -10px;
+				}
+				@include mq{
+					display: none !important;
 				}
 			}
 
@@ -261,8 +270,10 @@
 				}
 
 				@include mq {
-					width: 28vw;
-					height: 28vw;
+					display: block;
+					width: 300px;
+					height: 300px;
+					margin: 0 auto;
 				}
 
 				@include p-before(100%, 100%) {
@@ -298,10 +309,6 @@
 					z-index: 4;
 					width: 100%;
 					text-align: center;
-
-					@include mq {
-						@include font-size(35);
-					}
 				}
 			}
 
@@ -375,9 +382,10 @@
 			overflow: hidden;
 
 			@include mq {
-				max-width: 300px;
-				height: 90px;
-				@include font-size(40);
+				border-radius: 10px;
+				max-width: 350px;
+				height: 206px;
+				@include font-size(112);
 			}
 
 			span {
@@ -393,6 +401,9 @@
 				background: linear-gradient(180deg, rgba(3, 163, 77, 1) 0%, rgba(0, 131, 60, 1) 100%);
 				@include smooth-transition;
 				z-index: 2;
+				@include mq{
+					opacity: .9;
+				}
 			}
 
 			img {
@@ -405,18 +416,10 @@
 				@include object-fit(cover);
 				@include smooth-transition;
 			}
-		}
-
-		&:hover {
-			@include mq(tb-min) {
-				a {
+			&:hover {
+				@include mq(tb-min) {
 					img {
 						height: 100%;
-						@include smooth-transition;
-					}
-
-					span {
-						transform: translateX(-120px);
 						@include smooth-transition;
 					}
 
@@ -517,6 +520,9 @@
 						margin-left: 5px;
 					}
 				}
+			}
+			small{
+				color: #9EEFC4;
 			}
 		}
 
