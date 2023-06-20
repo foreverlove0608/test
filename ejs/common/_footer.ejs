@@ -1,6 +1,6 @@
 <% if(pageData.template != 'contact'){%>
 	<section class="sec-contact">
-		<a href="/contact/" class="inner contact-top">
+		<a href="<%= RELATIVE_PATH %>contact/" class="inner contact-top">
 			<img src="<%= RELATIVE_PATH %>img/common/bg-contact.jpg" alt="">
 			<div class="contact-top__wp">
 				<h2 class="contact-top__ttl c-ttl__01">
@@ -17,12 +17,12 @@
 <footer id="main-footer" class="main-footer <% if(pageData.template == 'contact'){%>footer-contact<%}%>">
 	<div class="inner">
 		<a href="#" class="main-footer__logo">
-			<img src="<%= RELATIVE_PATH %>img/common/logo.png" alt="">
-			<span>印刷事業部</span>
+			<img src="<%= RELATIVE_PATH %>img/common/logo.png" alt="" class="pc">
+			<img src="<%= RELATIVE_PATH %>img/common/logo-ft-sp.png" alt="" class="sp">
 		</a>
 		<ul class="main-footer__nav">
-			<li><a href="/about/">事業内容</a></li>
-			<li><a href="/contact/">お問い合わせ</a></li>
+			<li><a href="<%= RELATIVE_PATH %>serice/">事業内容</a></li>
+			<li><a href="<%= RELATIVE_PATH %>contact/">お問い合わせ</a></li>
 		</ul>
 		<div class="main-footer__bottom">
 			<a href="#" class="main-footer__bottom-privacy">プライバシーポリシー</a>

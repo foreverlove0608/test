@@ -1853,7 +1853,7 @@ Header
 }
 @media screen and (max-width: 834px) {
   .main-header__logo {
-    width: 160px;
+    width: 240px;
   }
 }
 .main-header__navGlobal {
@@ -3348,6 +3348,8 @@ Footer
 }
 .mv-page img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 834px) {
   .mv-page {
