@@ -1293,6 +1293,9 @@ Layout
   font-weight: 400;
 }
 
+.common-slider {
+  pointer-events: none;
+}
 @media screen and (max-width: 834px) {
   .common-slider li {
     position: relative;
@@ -1316,6 +1319,7 @@ Layout
 }
 
 .slider-dots-box {
+  pointer-events: none;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;

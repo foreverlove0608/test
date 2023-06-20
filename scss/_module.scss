@@ -102,6 +102,7 @@ Layout
 
 //style common slider
 .common-slider{
+	pointer-events: none;
 	li{
 		@include mq{
 			@include aspect-ratio(1, 1);
@@ -109,6 +110,7 @@ Layout
 	}
 }
 .slider-dots-box {
+	pointer-events: none;
 	@include flex(0, center);
 	margin-top: 24px;
 	@include mq{
