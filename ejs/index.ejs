@@ -1,22 +1,24 @@
 <section class="mv-top">
-	<ul class="mv-top__slider">
-		<li class="mv-top__slider-item first">
-			<div class="mv-top__slider-img">
-				<img src="<%= RELATIVE_PATH %>img/index/mv-01.jpg" alt="">
-			</div>
-		</li>
-		<li class="mv-top__slider-item">
-			<div class="mv-top__slider-img">
-				<img src="<%= RELATIVE_PATH %>img/index/mv-02.jpg" alt="">
-			</div>
-		</li>
-		<li class="mv-top__slider-item">
-			<div class="mv-top__slider-img">
-				<img src="<%= RELATIVE_PATH %>img/index/mv-03.jpg" alt="">
-			</div>
-		</li>
-	</ul>
-	<div class="slider-dots-box"></div>
+	<div class="swiper">
+		<ul class="mv-top__slider swiper-wrapper">
+			<li class="mv-top__slider-item swiper-slide">
+				<div class="slide-img">
+					<img src="<%= RELATIVE_PATH %>img/index/mv-01.jpg" alt="">
+				</div>
+			</li>
+			<li class="mv-top__slider-item swiper-slide">
+				<div class="slide-img">
+					<img src="<%= RELATIVE_PATH %>img/index/mv-02.jpg" alt="">
+				</div>
+			</li>
+			<li class="mv-top__slider-item swiper-slide">
+				<div class="slide-img">
+					<img src="<%= RELATIVE_PATH %>img/index/mv-03.jpg" alt="">
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="swiper-pagination"></div>
 	<div class="mv-top__ct">
 		<h1 class="mv-top__ct-ttl">With Your Printing</h1>
 		<p class="mv-top__ct-desc">身近な存在であり続けるため、私達は努力を続けます。</p>

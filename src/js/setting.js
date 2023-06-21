@@ -32,17 +32,6 @@ window.addEventListener('resize', () => {
 
 
 /*----------------------------------------
-	Size
-----------------------------------------*/
-$(window).on('load', function () {
-	$('.mv-top__slider .first img').addClass('zoom-out');
-})
-
-setTimeout(function(){
-	$('.mv-top__slider .first img').removeClass('zoom-out');
-}, 10000);
-
-/*----------------------------------------
 	Common Utility
 ----------------------------------------*/
 
@@ -169,77 +158,95 @@ $(function () {
 	});
 
 
-	$('.common-slider').each(function () {
-		$(this).slick({
-			pauseOnHover: false,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			dots: true,
-			autoplay: true,
-			autoplaySpeed: 4000,
-			focusOnSelect: true,
-			appendDots: $(this).next(),
-			dotsClass: 'slider-dots',
-			fade: true,
-			cssEase: 'linear',
-		});
+	// $('.common-slider').each(function () {
+	// 	$(this).slick({
+	// 		pauseOnHover: false,
+	// 		slidesToShow: 1,
+	// 		slidesToScroll: 1,
+	// 		dots: true,
+	// 		autoplay: true,
+	// 		autoplaySpeed: 4000,
+	// 		focusOnSelect: true,
+	// 		appendDots: $(this).next(),
+	// 		dotsClass: 'slider-dots',
+	// 		// fade: true,
+	// 		// cssEase: 'linear',
+	// 	});
 	
-		// On before slide change
-		$(this).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-			$(this).next().find('button').html('');
-		}).trigger('beforeChange');
+	// 	// On before slide change
+	// 	$(this).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+	// 		$(this).next().find('button').html('');
+	// 	}).trigger('beforeChange');
 	
-		// On before slide change
-		$(this).on('afterChange', function (event, slick, currentSlide) {
-			$(this).next().find('button').html('');
-			$('.slider-dots-box .slick-active button')
-				.html(`<svg class="progress-svg" width="24" height="24">
-			<g transform="translate(12,12)">
-		  <circle class="circle-go" r="11" cx="0" cy="0"></circle>
-			</g>
-		</svg>`);
-		}).trigger('afterChange');
-	});
-	
+	// 	// On before slide change
+	// 	$(this).on('afterChange', function (event, slick, currentSlide) {
+	// 		$(this).next().find('button').html('');
+	// 		$('.slider-dots-box .slick-active button')
+	// 			.html(`<svg class="progress-svg" width="24" height="24">
+	// 		<g transform="translate(12,12)">
+	// 	  <circle class="circle-go" r="11" cx="0" cy="0"></circle>
+	// 		</g>
+	// 	</svg>`);
+	// 	}).trigger('afterChange');
+	// });
 
-	//Slider MV
-	$('.mv-top__slider').on('afterChange init', function(event, slick, direction){
-		$('.mv-top__slider').next().find('button').html('');
-		$('.slider-dots-box .slick-active button')
-			.html(`<svg class="progress-svg" width="24" height="24">
-		<g transform="translate(12,12)">
-	  <circle class="circle-go" r="11" cx="0" cy="0"></circle>
-		</g>
-	</svg>`);
-		slick.$slides.removeClass('prev').removeClass('next');
-		for (var i = 0; i < slick.$slides.length; i++)
-		{
-			var $slide = $(slick.$slides[i]);
-			if ($slide.hasClass('slick-current')) {
-				$slide.prev().addClass('prev');
-				$slide.next().addClass('next');
-				break;
+
+
+	//Common slider
+	const swiperOptions = {
+		loop: true,
+		effect: "fade",
+		speed: 2000,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false
+		},
+		//custom pagination
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			renderBullet: function (i, className) {
+			return `
+				<button class="${className}">
+				<svg class="progress-svg" width="24" height="24">
+				<g transform="translate(12,12)">
+				<circle class="circle-go" r="11" cx="0" cy="0"></circle>
+				</g>
+				</svg>
+				</button>
+			`;
 			}
 		}
-	}
-	)
-	.on('beforeChange', function(event, slick) {
-		slick.$slides.removeClass('prev').removeClass('next');
-		$('.mv-top__slider').next().find('button').html('');
-	})
-	.slick({
-		dots: true,
-		focusOnSelect: true,
-		pauseOnHover:false,
-		infinite: true,
-		fade: true,
-		autoplay: true,
-		navs: false,
-		autoplaySpeed: 5000,
-		cssEase: 'linear',
-		appendDots: $('.slider-dots-box'),
-		dotsClass: 'slider-dots',
-	});
+	};
+
+	const swiperOptions02 = {
+		loop: "infinite",
+		effect: "fade",
+		// autoplay: false,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false
+		},
+		//custom pagination
+		pagination: {
+			el: ".swiper-pagination02",
+			clickable: true,
+			renderBullet: function (i, className) {
+			return `
+				<button class="${className}">
+				<svg class="progress-svg" width="24" height="24">
+				<g transform="translate(12,12)">
+				<circle class="circle-go" r="11" cx="0" cy="0"></circle>
+				</g>
+				</svg>
+				</button>
+			`;
+			}
+		}
+	};
+
+	const swiper = new Swiper(".swiper", swiperOptions);
+	const swiper02 = new Swiper(".swiper02", swiperOptions02);
 })
 
 
