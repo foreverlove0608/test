@@ -88,10 +88,10 @@ Component
 ==================================================== */
 // Common Text style
 .c-txt{
-	&__01{//14/29
+	&__01{//14/29 
 		@include fts(18, 25.2);
 		@include mq() {
-			@include fts(16, 22.4);
+			@include fts(14, 19.6);
 		}
 	}
 	&__lead{

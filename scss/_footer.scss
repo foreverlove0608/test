@@ -74,10 +74,17 @@ Footer
 	}
 	&__ttl{
 		position: relative;
+		small{
+			@include mq{
+				font-weight: 400;
+				color: #CBD4E1;
+			}
+		}
 	}
 	&__desc{
 		color: #fff;
 		@include mq{
+			font-weight: 600;
 			width: 75%;
 			color: #CBD4E1;
 		}

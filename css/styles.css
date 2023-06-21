@@ -1530,8 +1530,8 @@ Component
 }
 @media screen and (max-width: 834px) {
   .c-txt__01 {
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 1.4;
   }
 }
@@ -2071,9 +2071,6 @@ Header
 .main-header__mobile-icon.mobile-close span {
   background: #000;
 }
-.main-header.is-active, .main-header.header-child {
-  background: rgba(0, 0, 0, 0.5);
-}
 @media screen and (min-width: 835px) {
   .main-header.is-active, .main-header.header-child {
     background: #fff;
@@ -2432,11 +2429,18 @@ Footer
 .contact-top__ttl {
   position: relative;
 }
+@media screen and (max-width: 834px) {
+  .contact-top__ttl small {
+    font-weight: 400;
+    color: #CBD4E1;
+  }
+}
 .contact-top__desc {
   color: #fff;
 }
 @media screen and (max-width: 834px) {
   .contact-top__desc {
+    font-weight: 600;
     width: 75%;
     color: #CBD4E1;
   }
@@ -2612,6 +2616,7 @@ Footer
   /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
   position: relative;
+  overflow: hidden;
 }
 .mv-top .swiper-pagination {
   position: absolute;
@@ -2699,6 +2704,8 @@ Footer
   height: 100vh;
   /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .mv-top__btn {
   max-width: 264px;
@@ -3158,10 +3165,16 @@ Footer
 }
 .our-service__top-desc {
   margin-bottom: 32px;
+  color: #9EEFC4;
 }
 @media screen and (max-width: 834px) {
   .our-service__top-desc {
     margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 834px) {
+  .our-service__top-desc .c-txt__01 {
+    font-size: 1.6rem;
   }
 }
 .our-service__top-btn {

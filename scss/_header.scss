@@ -206,7 +206,7 @@ Header
 
 //active	
 	&.is-active, &.header-child{
-		background: rgba(#000, .5);
+		// background: rgba(#000, .5);
 		@include mq(md-min){
 			background: #fff;
 			box-shadow: 0 0 10px rgba(#000, .1);
