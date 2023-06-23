@@ -1292,6 +1292,9 @@ Layout
 .box-sidebar__list li.active a {
   font-weight: 400;
 }
+.box-sidebar.z-index {
+  z-index: 3;
+}
 
 @media screen and (max-width: 834px) {
   .swiper-slide img {
@@ -1377,6 +1380,10 @@ Layout
             transform: scale(1.4);
   }
 }
+.common-slider {
+  overflow: hidden;
+}
+
 .swiper-pagination-bullet {
   position: relative;
   display: -ms-flexbox;
@@ -1621,6 +1628,7 @@ Component
 .c-ttl__02 small {
   font-size: 3.2rem;
   color: #03A34D;
+  line-height: 1.5;
 }
 @media screen and (max-width: 1200px) {
   .c-ttl__02 small {
@@ -1846,6 +1854,10 @@ Header
   -webkit-box-align: end;
           align-items: flex-end;
   position: relative;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .main-header__logo .logo-wt {
   display: block;
@@ -1857,6 +1869,13 @@ Header
   .main-header__logo {
     width: 240px;
   }
+}
+.main-header__logo:hover {
+  opacity: 0.7;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .main-header__navGlobal {
   width: calc(100% - 300px);
@@ -2985,7 +3004,6 @@ Footer
     border-radius: 10px;
     max-width: 350px;
     height: 206px;
-    font-size: 11.2rem;
   }
 }
 .kodawrari-top__btn a span {
@@ -3210,6 +3228,13 @@ Footer
     width: 20px;
     height: 20px;
   }
+}
+.our-service__top-btn a:hover {
+  opacity: 0.7;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .our-service__gallery {
   display: -ms-flexbox;
@@ -3741,6 +3766,7 @@ Footer
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 10px;
+  position: relative;
 }
 @media screen and (max-width: 834px) {
   .contact-page__form-label {
@@ -3752,7 +3778,6 @@ Footer
   top: 0;
   color: #ED2649;
   font-size: 1.6rem;
-  position: relative;
 }
 
 .btn-submit {
