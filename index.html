@@ -36,7 +36,7 @@
 		</header>
 		<main id="page-index" class="wrapper">
 			<section class="mv-top">
-				<div class="swiper">
+				<div class="swiper-mv">
 					<ul class="mv-top__slider swiper-wrapper">
 						<li class="mv-top__slider-item swiper-slide">
 							<div class="slide-img">
@@ -60,7 +60,7 @@
 					<h1 class="mv-top__ct-ttl">With Your Printing</h1>
 					<p class="mv-top__ct-desc">身近な存在であり続けるため、私達は努力を続けます。</p>
 				</div>
-				<a href="#" class="mv-top__btn"><span>お問い合わせ</span></a>
+				<a href="./contact/" class="mv-top__btn"><span>お問い合わせ</span></a>
 			</section>
 			<section class="kodawrari-top">
 				<div class="inner">
@@ -79,7 +79,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="">
+							<a href="./service_04/">
 								<img src="./img/index/img-top-03.png" alt="加工">
 								<span>加工</span>
 							</a>
@@ -93,7 +93,9 @@
 					<li class="kodawrari-top__slider-item"><img src="./img/index/slider-kodawari-01.jpg" alt=""></li>
 					<li class="kodawrari-top__slider-item"><img src="./img/index/slider-kodawari-02.jpg" alt=""></li>
 					<li class="kodawrari-top__slider-item"><img src="./img/index/slider-kodawari-03.jpg" alt=""></li>
+					<li class="kodawrari-top__slider-item"><img src="./img/index/slider-kodawari-01.jpg" alt=""></li>
 					<li class="kodawrari-top__slider-item"><img src="./img/index/slider-kodawari-02.jpg" alt=""></li>
+					<li class="kodawrari-top__slider-item"><img src="./img/index/slider-kodawari-03.jpg" alt=""></li>
 				</ul>
 			</section>
 			<section class="our-service">
@@ -153,7 +155,7 @@
 					<img src="./img/common/logo-ft-sp.png" alt="" class="sp">
 				</a>
 				<ul class="main-footer__nav">
-					<li><a href="./serice/">事業内容</a></li>
+					<li><a href="./service/">事業内容</a></li>
 					<li><a href="./contact/">お問い合わせ</a></li>
 				</ul>
 				<div class="main-footer__bottom">
@@ -166,5 +168,36 @@
 		<script src="./js/vendors/slick/slick.min.js"></script>
 		<script src="./js/vendors/swiper.min.js"></script>
 		<script src="./js/setting.js"></script>
+		<script>
+			const swiperOptions = {
+				loop: "infinite",
+				speed: 2000,
+				effect: "fade",
+				autoplay:
+				{
+					delay: 5000,
+					disableOnInteraction: false
+				},
+				//custom pagination
+				pagination:
+				{
+					el: ".swiper-pagination",
+					clickable: true,
+					renderBullet: function(i, className)
+					{
+						return `
+				<button class="${className}">
+				<svg class="progress-svg" width="24" height="24">
+				<g transform="translate(12,12)">
+				<circle class="circle-go" r="11" cx="0" cy="0"></circle>
+				</g>
+				</svg>
+				</button>
+			`;
+					}
+				}
+			};
+			const swiper = new Swiper(".swiper-mv", swiperOptions);
+		</script>
 	</body>
 </html>
