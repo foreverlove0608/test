@@ -1587,6 +1587,7 @@ Component
 .c-ttl__01 small {
   font-size: 3.2rem;
   line-height: 1.5;
+  color: #9EEFC4;
 }
 @media screen and (max-width: 1200px) {
   .c-ttl__01 small {
@@ -1986,9 +1987,11 @@ Header
   }
 }
 .main-header__menu-item--contact a:hover {
-  border-color: #03A34D;
-  background: #fff;
-  color: #000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#03A34D), to(#00833C));
+  background: -o-linear-gradient(top, #03A34D 0%, #00833C 100%);
+  background: linear-gradient(180deg, #03A34D 0%, #00833C 100%);
+  color: #fff !important;
+  border-color: #03A34D !important;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -2352,7 +2355,7 @@ Footer
 
 .contact-top {
   display: block;
-  padding: 6.615vw 3.125vw;
+  padding: 7.615vw 3.125vw;
   position: relative;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.3s ease;
@@ -2462,7 +2465,7 @@ Footer
   }
 }
 .contact-top__desc {
-  color: #fff;
+  color: #9EEFC4;
 }
 @media screen and (max-width: 834px) {
   .contact-top__desc {
